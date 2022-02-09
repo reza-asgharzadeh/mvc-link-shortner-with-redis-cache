@@ -1,0 +1,15 @@
+{
+    "name": "reza/mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Reza Asgharzadeh",
+            "email": "rezaasgharzadeh73@gmail.com"
+        }
+    ],
+    "require": {}
+}
