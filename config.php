@@ -1,7 +1,7 @@
 <?php
 $config = [
     "servername" => "localhost",
-    "dbname" => "link",
+    "dbname" => "mvc-link",
     "username" => "root",
     "password" => ""
 ];

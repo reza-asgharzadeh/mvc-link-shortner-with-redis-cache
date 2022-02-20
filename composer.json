@@ -11,5 +11,7 @@
             "email": "rezaasgharzadeh73@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "predis/predis": "^1.1"
+    }
 }

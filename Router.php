@@ -1,5 +1,6 @@
 <?php
 namespace app;
+use app\models\Database;
 
 class Router
 {
@@ -34,10 +35,10 @@ class Router
             $fn = $this->postRoutes[$url] ?? null;
         }
         if (!$fn) {
-            echo 'Page not found';
+            header("location: /404");
             exit;
         }
-        echo call_user_func($fn, $this);
+        call_user_func_array(array(new $fn[0], $fn[1]), array($this));
     }
 
     public function renderView($view, $params = [])
@@ -45,6 +46,7 @@ class Router
         foreach ($params as $key => $value) {
             $$key = $value;
         }
+
         ob_start();
         include __DIR__."/views/$view.php";
         $content = ob_get_clean();
